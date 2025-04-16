@@ -20,6 +20,8 @@ public class AsteroidSpawner : MonoBehaviour
 
         Vector3 spawnPosition = player.position + spawnDirection * spawnDistance;
 
+        spawnPosition = new Vector3(spawnPosition.x,Mathf.Abs(spawnPosition.y),spawnPosition.z);
+
         GameObject asteroid = Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
 
         Rigidbody rb = asteroid.GetComponent<Rigidbody>();
