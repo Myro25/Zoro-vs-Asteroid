@@ -63,7 +63,7 @@ public class AsteroidSpawner : MonoBehaviour
 
         // Mouvement vers le joueur
         Rigidbody rb = asteroid.GetComponent<Rigidbody>();
-        rb.velocity = (player.position - spawnPosition).normalized * asteroidSpeed;
+        rb.linearVelocity = (player.position - spawnPosition).normalized * asteroidSpeed;
 
         // On ajoute à la liste pour le suivi
         spawnedAsteroids.Add(asteroid);
