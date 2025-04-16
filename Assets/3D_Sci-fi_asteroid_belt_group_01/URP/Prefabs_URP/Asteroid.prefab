@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9172214944996212460}
   - component: {fileID: 323590640606385559}
   m_Layer: 0
-  m_Name: asteroid_mod_02_low
+  m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
