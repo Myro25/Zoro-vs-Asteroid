@@ -9,6 +9,8 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnDistance = 10f;
     public float asteroidSpeed = 2f;
 
+
+
     [Header("Player Reference")]
     public Transform player; // Drag ta caméra AR ici
 
