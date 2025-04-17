@@ -12,7 +12,7 @@ public class AsteroidSpawner : MonoBehaviour
 
 
     [Header("Player Reference")]
-    public Transform player; // Drag ta caméra AR ici
+    public Transform player; // Drag la caméra AR ici
 
     [Header("Auto-Destruction")]
     public float destroyYThreshold = -1f;
@@ -22,6 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Spawner launched!");
         // Lancer l'apparition régulière des astéroïdes
         InvokeRepeating("SpawnAsteroid", 2f, spawnInterval);
     }
