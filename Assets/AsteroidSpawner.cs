@@ -7,7 +7,9 @@ public class AsteroidSpawner : MonoBehaviour
     public GameObject asteroidPrefab;
     public float spawnInterval = 2f;
     public float spawnDistance = 10f;
-    public float asteroidSpeed = 1f;
+    public float asteroidSpeed = 2f;
+
+
 
     [Header("Player Reference")]
     public Transform player; // Drag ta caméra AR ici
