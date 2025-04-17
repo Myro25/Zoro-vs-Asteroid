@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class DestroyOnHit : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Asteroid"))
+        if (collision.gameObject.CompareTag("Missile"))
         {
-            Destroy(collision.gameObject); // détruit l'astéroïde
-            Destroy(gameObject); // détruit le missile
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            FindFirstObjectByType<GameOverManager>().TriggerGameOver();
         }
     }
 }
