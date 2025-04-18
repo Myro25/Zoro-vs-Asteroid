@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1593165005011989075}
   - component: {fileID: 6148217206567367209}
   - component: {fileID: 8511134613932408642}
-  - component: {fileID: -7712276225493018176}
+  - component: {fileID: -8471140594693982992}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: SmallAsteroids
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d0e73a73eac4ad696e2af1172bb095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7712276225493018176
+--- !u!114 &-8471140594693982992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde8ad4f879b2b74897434f8495e097b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallAsteroidPrefab: {fileID: 9121707725150497619, guid: 866952452ffb07b4e9521c2391d6c126,
-    type: 3}
-  asteroidSize: 2
+  smallAsteroidPrefab: {fileID: 0}
+  asteroidSize: 0
   numberOfPieces: 2
   splitForce: 2
