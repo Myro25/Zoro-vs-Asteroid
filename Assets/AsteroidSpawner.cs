@@ -5,9 +5,9 @@ public class AsteroidSpawner : MonoBehaviour
 {
     [Header("Asteroid Settings")]
     public GameObject asteroidPrefab;
-    public float spawnInterval = 2f;
-    public float spawnDistance = 10f;
-    public float asteroidSpeed = 2f;
+    public float spawnInterval = 5f;
+    public float spawnDistance = 50f;
+    public float asteroidSpeed = 1f;
 
 
 
