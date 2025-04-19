@@ -10086,7 +10086,6 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3463772929304779450, guid: 8be8e172b932441b9966539dd67550f6,
     type: 3}
   shootingForce: 500
-  DebugText: {fileID: 231085564}
 --- !u!136 &1386742252
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14999,7 +14998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: -30}
+  m_AnchoredPosition: {x: -60, y: -60}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2143408186
