@@ -5,14 +5,14 @@ public class AsteroidSpawner : MonoBehaviour
 {
     [Header("Asteroid Settings")]
     public GameObject asteroidPrefab;
+
     public float spawnInterval = 3f;
-    public float spawnDistance = 10f;
+    public float spawnDistance = 15f;
     public float asteroidSpeed = 1f;
 
 
-
     [Header("Player Reference")]
-    public Transform player; // Drag ta caméra AR ici
+    public Transform player; // Drag la caméra AR ici
 
     [Header("Auto-Destruction")]
     public float destroyYThreshold = -1f;
@@ -22,6 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Spawner launched!");
         // Lancer l'apparition régulière des astéroïdes
         InvokeRepeating("SpawnAsteroid", 2f, spawnInterval);
     }
