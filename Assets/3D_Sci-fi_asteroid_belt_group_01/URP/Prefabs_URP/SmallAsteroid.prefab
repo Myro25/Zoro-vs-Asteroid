@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5881294696260136219}
   m_Layer: 0
   m_Name: SmallAsteroid
-  m_TagString: Asteroid
+  m_TagString: SmallAsteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,4 +151,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallAsteroidPrefab: {fileID: 9121707725150497619}
   splitForce: 5
-  player: {fileID: 0}
