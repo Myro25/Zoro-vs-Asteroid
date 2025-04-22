@@ -23,11 +23,11 @@ public class DestroyOnHit : MonoBehaviour
                     rb.AddForce(randomDir * splitForce, ForceMode.Impulse);
                 }
 
-                FindFirstObjectByType<LevelProgressManager>().AddScore(20);
+                FindFirstObjectByType<LevelProgressManager>().AddScore(40);
             }
             else if (CompareTag("SmallAsteroid"))
             {
-                FindFirstObjectByType<LevelProgressManager>().AddScore(10);
+                FindFirstObjectByType<LevelProgressManager>().AddScore(20);
             }
 
             Destroy(collision.gameObject);

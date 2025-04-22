@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
+
 
 public class LevelProgressManager : MonoBehaviour
 {
     public Slider progressBar;
     public AsteroidSpawner spawner;
-    public Text levelText;
+    public TextMeshProUGUI levelText;
 
     public int currentScore = 0;
     public int scoreToNextLevel = 100;
