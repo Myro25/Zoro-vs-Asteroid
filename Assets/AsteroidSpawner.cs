@@ -9,27 +9,22 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnDistance = 25f;
     public float asteroidSpeed = 1.5f;
 
-
-
     [Header("Player Reference")]
-    public Transform player; // Drag la caméra AR ici
+    public Transform player;
 
     [Header("Auto-Destruction")]
     public float destroyYThreshold = -1f;
 
-    // Liste des astéroïdes générés
     private List<GameObject> spawnedAsteroids = new List<GameObject>();
 
     void Start()
     {
         Debug.Log("Spawner launched!");
-        // Lancer l'apparition régulière des astéroïdes
         InvokeRepeating("SpawnAsteroid", 2f, spawnInterval);
     }
 
     void Update()
     {
-        // Vérification pour détruire les astéroïdes tombés trop bas
         for (int i = spawnedAsteroids.Count - 1; i >= 0; i--)
         {
             GameObject asteroid = spawnedAsteroids[i];
@@ -51,24 +46,16 @@ public class AsteroidSpawner : MonoBehaviour
 
     void SpawnAsteroid()
     {
-        // Génère une direction aléatoire autour du joueur
         Vector3 spawnDirection = Random.onUnitSphere;
         spawnDirection.y = Mathf.Clamp(spawnDirection.y, -0.5f, 0.5f);
-
-        // Position de spawn autour du joueur
         Vector3 spawnPosition = player.position + spawnDirection * spawnDistance;
-
-        // On évite les valeurs négatives trop profondes dès le spawn
         spawnPosition = new Vector3(spawnPosition.x, Mathf.Abs(spawnPosition.y), spawnPosition.z);
 
-        // Instanciation
         GameObject asteroid = Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
 
-        // Mouvement vers le joueur
         Rigidbody rb = asteroid.GetComponent<Rigidbody>();
         rb.linearVelocity = (player.position - spawnPosition).normalized * asteroidSpeed;
 
-        // On ajoute à la liste pour le suivi
         spawnedAsteroids.Add(asteroid);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class ShootProjectile : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float shootingForce = 500f;
+    public float shootingForce = 1000f;
 
     void Update()
     {
